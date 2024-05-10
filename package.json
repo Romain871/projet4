@@ -1,0 +1,9 @@
+{
+    "name" : "projet 4" , 
+    "version" : "1.0.0" , 
+    "author" : "romain.piet17540@gmail.com",
+  
+  "scripts": {
+    "node": "node-sass --watch styles.scss dist/styles.css"
+    }
+}
