@@ -1,0 +1,27 @@
+.pageLoading {
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    animation: loader-background 1600ms;
+    &__bar1 {
+        animation: roll-in 600ms ease-out 200ms alternate 2 both;
+        @include loadingBar ($secondary-color);
+    }
+    &__bar2 {
+        animation: roll-in 600ms ease-out 400ms alternate 2 both;
+        @include loadingBar ($tertiary-color);    
+    }
+    &__bar3 {
+        animation: roll-in 600ms ease-out 600ms alternate 2 both;
+        @include loadingBar ($primary-color);  
+    }
+}

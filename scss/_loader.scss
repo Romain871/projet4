@@ -1,0 +1,35 @@
+@import "_variables";
+@import "_mixin";
+@import "_animations";
+
+
+.loading_page{
+    position: absolute;
+    display: flex;
+    @include size(100%);
+    animation: loading 3s ease-in-out;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+}
+
+.loader{
+    background-color: rgba(78, 78, 78, 0.808);
+    z-index: 10000;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    @include size(100%);
+}
+.loader div {
+    position: absolute;
+    top: 45vh;
+    border-radius: 50%;
+    @include size(100px);
+    border: $border;
+    border-top-color: $Primaire-color;
+    animation: loader 2.5s linear forwards;
+}
+.loader div:nth-child(2){ 
+    border: $border;
+    border-bottom-color: $Secondaire-color;
+}
