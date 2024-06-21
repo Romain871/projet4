@@ -24,21 +24,11 @@
     transform: translateY(0);
     opacity: 1; } }
 
-@font-face {
-  font-family: "roboto-regular";
-  src: url("../assets/font/roboto/Roboto-Regular.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "shrikhand";
-  src: url("../assets/font/shrikhand/shrikhand.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal; }
-
-/*# sourceMappingURL=style.css.map */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif; }
   *::after {
     margin: 0;
     padding: 0;
@@ -123,7 +113,6 @@ button {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     background-image: linear-gradient(#ff79da, #9356dc);
-    -webkit-background-clip: text;
     color: transparent;
     opacity: 0;
     transform: scale(0);
@@ -480,6 +469,13 @@ footer {
   footer a {
     color: white; }
 
+.fin {
+  font-size: 18px;
+  padding-left: 15px;
+  font-style: oblique;
+  font-family: initial;
+  font-weight: bold; }
+
 @media screen and (min-width: 1440px) {
   main {
     border-top-right-radius: 3rem;
@@ -495,7 +491,11 @@ footer {
   footer ul {
     width: 1440px;
     margin: auto;
-    margin-top: 2.2rem; } }
+    margin-top: 2.2rem;
+    display: flex;
+    justify-content: end;
+    padding-right: 6em;
+    gap: 4em; } }
 
 @media screen and (min-width: 768px) {
   .instructionCards {
@@ -522,6 +522,7 @@ footer {
     justify-content: space-between;
     gap: 4rem;
     padding-left: 4rem;
-    padding-right: 4rem; }
+    padding-right: 4rem;
+    flex-direction: column; }
   .course {
     width: 100%; } }
