@@ -3,26 +3,24 @@ $color_2: white;
 $color_3: transparent;
 $color_4: #353535;
 $color_5: #9356dc;
-$color_6: grey;
-$color_7: #f6f6f6;
+$color_6: #f6f6f6;
+$color_7: grey;
 $color_8: #2c9c81;
-$font-family_1: "Montserrat", sans-serif;
-$font-family_2: "roboto-regular";
-$font-family_3: "shrikhand";
-$font-family_4: "Font Awesome 6 Free";
-$font-family_5: initial;
-$background-color_1: rgba(146, 86, 220, 0.129412);
+$font-family_1: "roboto-regular";
+$font-family_2: "shrikhand";
+$font-family_3: "Font Awesome 6 Free";
+$background-color_1: rgba(146, 86, 220, 0.1294117647);
 
 @keyframes loader-background {
 	0% {
 		width: 100%;
 		height: 100%;
-		background-color: rgba(255, 255, 255, 0.9);
+		background-color: hsla(0deg, 0%, 100%, 0.9);
 	}
 	100% {
 		width: 100%;
 		height: 100%;
-		background-color: rgba(255, 255, 255, 0.9);
+		background-color: hsla(0deg, 0%, 100%, 0.9);
 	}
 }
 @keyframes roll-in {
@@ -45,11 +43,21 @@ $background-color_1: rgba(146, 86, 220, 0.129412);
 		opacity: 1;
 	}
 }
+@font-face {
+	font-family: "roboto-regular";
+	src: url("../assets/font/roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "shrikhand";
+	src: url("../assets/font/shrikhand/shrikhand.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+/*# sourceMappingURL=style.css.map */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: $font-family_1;
 	&::after {
 		margin: 0;
 		padding: 0;
@@ -63,7 +71,7 @@ $background-color_1: rgba(146, 86, 220, 0.129412);
 }
 html {
 	font-size: 62.5%;
-	font-family: $font-family_2;
+	font-family: $font-family_1;
 	height: 100%;
 }
 body {
@@ -88,7 +96,7 @@ li {
 	list-style-type: none;
 }
 h1 {
-	font-family: $font-family_3;
+	font-family: $font-family_2;
 	font-size: 2.8rem;
 	font-weight: 100;
 	margin: 0;
@@ -140,9 +148,10 @@ button {
 		top: 0;
 		left: 0;
 		content: "\f004";
-		font-family: $font-family_4;
+		font-family: $font-family_3;
 		font-weight: 900;
 		background-image: linear-gradient(#ff79da, #9356dc);
+		-webkit-background-clip: text;
 		color: $color_3;
 		opacity: 0;
 		transform: scale(0);
@@ -259,7 +268,7 @@ button {
 	>i {
 		position: relative;
 		right: 2rem;
-		color: $color_6;
+		color: $color_7;
 	}
 	>p {
 		font-weight: bold;
@@ -274,7 +283,7 @@ button {
 	width: 24px;
 	height: 24px;
 	border-radius: 50%;
-	color: $color_7;
+	color: $color_6;
 	background: #9356dc;
 }
 .restaurants {
@@ -364,7 +373,7 @@ button {
 	>h2 {
 		font-size: 2.8rem;
 		font-weight: lighter;
-		font-family: $font-family_3;
+		font-family: $font-family_2;
 	}
 }
 .menu {
@@ -445,7 +454,7 @@ button {
 	}
 	&::after {
 		content: "\f058";
-		font-family: $font-family_4;
+		font-family: $font-family_3;
 		font-weight: 600;
 		font-size: 2.4rem;
 		color: $color_2;
@@ -511,11 +520,12 @@ footer {
 	color: $color_2;
 	padding: 2.2rem;
 	>p {
-		font-family: $font-family_3;
+		font-family: $font-family_2;
 		font-size: 1.8rem;
 	}
 	>ul {
 		margin-top: 2.2rem;
+		
 	}
 	li {
 		margin: 0.8rem 0;
@@ -536,15 +546,17 @@ footer {
 		margin-right: 0.9rem;
 	}
 	a {
-		color: $color_2;
+		color: $color_2; 
 	}
 }
-.fin {
-	font-size: 18px;
-	padding-left: 15px;
-	font-style: oblique;
-	font-family: $font-family_5;
-	font-weight: bold;
+	.fin {
+		font-weight: bold;
+		font-size: 22px;
+		font-style: italic;
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		line-height: 10.24px;
+	
+
 }
 @media screen and (min-width: 1440px) {
 	main {
@@ -568,9 +580,9 @@ footer {
 			margin: auto;
 			margin-top: 2.2rem;
 			display: flex;
-			justify-content: end;
-			padding-right: 6em;
-			gap: 4em;
+		gap: 3em;
+		justify-content: end;
+		margin-right: 33px;
 		}
 	}
 }
@@ -591,7 +603,7 @@ footer {
 	.restaurantsCards {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, 250px);
-		gap: 4rem; 
+		gap: 4rem;
 	}
 }
 @media screen and (min-width: 992px) {
@@ -601,14 +613,12 @@ footer {
 	}
 	.menu {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-between;  
 		gap: 4rem;
 		padding-left: 4rem;
 		padding-right: 4rem;
-		flex-direction: column;
 	}
 	.course {
-		width: 100%; 
+		width: 100%;
 	}
 }
- 

@@ -24,11 +24,21 @@
     transform: translateY(0);
     opacity: 1; } }
 
+@font-face {
+  font-family: "roboto-regular";
+  src: url("../assets/font/roboto/Roboto-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "shrikhand";
+  src: url("../assets/font/shrikhand/shrikhand.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+/*# sourceMappingURL=style.css.map */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif; }
+  box-sizing: border-box; }
   *::after {
     margin: 0;
     padding: 0;
@@ -113,6 +123,7 @@ button {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     background-image: linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
     color: transparent;
     opacity: 0;
     transform: scale(0);
@@ -470,11 +481,11 @@ footer {
     color: white; }
 
 .fin {
-  font-size: 18px;
-  padding-left: 15px;
-  font-style: oblique;
-  font-family: initial;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 22px;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 10.24px; }
 
 @media screen and (min-width: 1440px) {
   main {
@@ -493,9 +504,9 @@ footer {
     margin: auto;
     margin-top: 2.2rem;
     display: flex;
+    gap: 3em;
     justify-content: end;
-    padding-right: 6em;
-    gap: 4em; } }
+    margin-right: 33px; } }
 
 @media screen and (min-width: 768px) {
   .instructionCards {
@@ -522,7 +533,6 @@ footer {
     justify-content: space-between;
     gap: 4rem;
     padding-left: 4rem;
-    padding-right: 4rem;
-    flex-direction: column; }
+    padding-right: 4rem; }
   .course {
     width: 100%; } }
