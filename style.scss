@@ -53,7 +53,7 @@ $background-color_1: rgba(146, 86, 220, 0.1294117647);
 	font-weight: normal;
 	font-style: normal;
 }
-/*# sourceMappingURL=style.css.map */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -154,14 +154,13 @@ button {
 		-webkit-background-clip: text;
 		color: $color_3;
 		opacity: 0;
-		transform: scale(0);
 		transition: opacity ease-in-out 600ms, filter ease-in-out 500ms, transform ease-in-out 300ms;
 	}
 	&:hover {
 		&::after {
 			opacity: 1;
 			filter: brightness(110%);
-			transform: scale(1);
+			
 		}
 	}
 }
@@ -337,7 +336,7 @@ button {
 	margin-top: 1.4rem;
 	margin-right: 2.2rem;
 	margin-left: 1.4rem;
-	line-height: 2.4rem;
+	line-height: 2.4rem; 
 }
 .restaurantPage__header {
 	display: flex;
@@ -617,6 +616,7 @@ footer {
 		gap: 4rem;
 		padding-left: 4rem;
 		padding-right: 4rem;
+		flex-direction:column ;
 	}
 	.course {
 		width: 100%;
